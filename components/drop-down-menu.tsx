@@ -6,15 +6,18 @@ interface DropDownMenuProps {
   scrollToServices: () => void; // Add scrollToServices function to props
 }
 
-const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose, scrollToServices }) => {
+const DropDownMenu: React.FC<DropDownMenuProps> = ({
+  onClose,
+  scrollToServices,
+}) => {
   return (
     <motion.div
       className="
     w-screen
     h-screen
     bg-gradient-to-b 
-    from-neutral-50
-     to-neutral-400 
+    from-neutral-100
+     to-neutral-700 
      bg-opacity-50
      text-slate-300
      p-6
@@ -40,11 +43,11 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose, scrollToServices }
         </Link>
 
         <Link href="/book" className="text-black text-2xl">
-          Book a call
+          Get a Book
         </Link>
 
         {/* Add onClick handler to Services link */}
-        <Link href='/#services'  className="cursor-pointer text-black text-2xl">
+        <Link href="/#services" className="cursor-pointer text-black text-2xl">
           Services
         </Link>
       </div>

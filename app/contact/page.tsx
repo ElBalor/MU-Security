@@ -9,6 +9,9 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 import { Checkbox } from "@/components/ui/checkbox";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { FaPhoneSquareAlt } from "react-icons/fa";
 
 import {
   Select,
@@ -132,7 +135,7 @@ export default function ContactForm() {
       <div className="md:flex items-start justify-center md:py-20 px-6">
         <div className="">
           <div className="text-5xl font-medium  w-full md:w-2/3  pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-            Contact our sales team
+            Contact MU-Security
           </div>
           <div
             className="
@@ -141,29 +144,19 @@ export default function ContactForm() {
               text-gray-300
                     "
           >
-            Let&apos;s talk about how Bird can help your team work better.
+            You can contact us through Let&apos;s Connect.
           </div>
 
-          <div className="bg-[#f6f5f4] md:w-4/5 space-y-6 p-4 rounded-2xl my-4 hidden md:flex md:flex-col">
-            <div className="flex gap-4 border-b ">
-              <div className=" font-normal pb-4 ">
-                One flexible agency for your entire company to share knowledge,
-                ship projects, and collaborate.
-              </div>
-            </div>
-
-            <div className="flex gap-4 border-b ">
-              <div className=" font-normal pb-4 ">
-                Enterprise features to securely manage user access and security.
-              </div>
-            </div>
-
-            <div className="flex gap-4  ">
-              <div className=" font-normal pb-4 ">
-                Dedicated support to work with you on your setup and help you
-                build the best plan for your company.
-              </div>
-            </div>
+          <div className="bg-cyan-700 md:w-4/5 space-x-4 p-4 justify-between flex items-center rounded-xl my-4 flex-row md:flex md:flex-row">
+            <button>
+              <FaWhatsapp size={30} />
+            </button>
+            <button>
+              <FaSquareFacebook size={30} />
+            </button>
+            <button>
+              <FaPhoneSquareAlt size={30} />
+            </button>
           </div>
         </div>
 
@@ -249,7 +242,7 @@ export default function ContactForm() {
                 render={({ field }) => (
                   <FormItem className="items-center justify-center w-full">
                     <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                    Services you are interested in
+                      Services you are interested in
                     </FormLabel>
                     <Select
                       onValueChange={field.onChange}
@@ -262,14 +255,20 @@ export default function ContactForm() {
                       </FormControl>
                       <SelectContent>
                         <div className="flex gap-4">
-                          <SelectItem value="Mobile App Develoment">
-                          Mobile App Develoment
+                          <SelectItem value=" Connect to get MU Books">
+                            Connect to get books
                           </SelectItem>
                         </div>
-                        <SelectItem value="Social Media Marketing">Social Media Marketing</SelectItem>
-                        <SelectItem value="51-200">51-200</SelectItem>
-                        <SelectItem value="501-1000">501-1000</SelectItem>
-                        <SelectItem value="1000+">1000+</SelectItem>
+                        <SelectItem value="Want to cnnect with MU team">
+                          Want to cnnect with MU team
+                        </SelectItem>
+                        <SelectItem value="Failed Transaction">
+                          Failed Transaction
+                        </SelectItem>
+                        <SelectItem value="Make Enquiry">
+                          Make Enquiry
+                        </SelectItem>
+                        <SelectItem value="Random">Random</SelectItem>
                       </SelectContent>
                     </Select>
                   </FormItem>
@@ -289,17 +288,14 @@ export default function ContactForm() {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger
-                        
-                        
-                        >
+                        <SelectTrigger>
                           <SelectValue placeholder="Select an option" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
                         <div className="flex gap-4">
                           <SelectItem value="Evaluate Bird for my company">
-                            Evaluate Bird for my company
+                            Evaluate your Company
                           </SelectItem>
                         </div>
                         <SelectItem value="Learn More">Learn More</SelectItem>
@@ -340,8 +336,7 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="text-xs font-light  md:w-3/4 mb-1 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                  I agree to Bird&apos; sending marketing communications related
-                  to bird
+                  I agree to MU Security&apos; Terms and Conditions to bird
                 </div>
               </div>
 

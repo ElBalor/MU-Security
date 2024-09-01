@@ -39,11 +39,11 @@ const Navbar = ({
           <Link className="cursor-pointer" href="/">
             <Image
               priority
-              src="/logo/logo.svg"
+              src="/mu-logo.jpg"
               alt="Logo"
               width={100}
               height={100}
-              className="w-10 h-10 md:w-14 md:h-14"
+              className="w-10 h-10 md:w-14 md:h-14 rounded-full"
             />
           </Link>
         </div>
@@ -56,17 +56,17 @@ const Navbar = ({
               to bg-neutral-400 bg-opacity-50"
         >
           <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
-            Website Design
+            About Us
           </div>
           <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
-            Graphic Design
+            MU Watch
           </div>
 
           <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
-            Shopify Stores
+            MU Updates
           </div>
           <div onClick={scrollToBrands} className="hover:text-gray-50">
-            Brands
+            MU Brands
           </div>
 
           <Link href="/pricing" className="hover:text-gray-50">
