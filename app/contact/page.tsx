@@ -151,11 +151,12 @@ export default function ContactForm() {
 
           <div className="bg-cyan-700 md:w-4/5 w-full space-x-5 p-4 justify-between flex items-center rounded-xl my-4 flex-row md:flex md:flex-row overflow-x-auto">
             <a
-              href={`https://wa.me/${+2348062107945}?text=${onmessage}`}
+              href={`https://wa.me/${+2348062107945}?text=Hello%20MU-Security!`}
               className="items-center flex flex-col "
             >
               <FaWhatsapp size={30} />
             </a>
+
             <button>
               <FaSquareFacebook size={30} />
             </button>
