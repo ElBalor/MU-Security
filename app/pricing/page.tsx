@@ -12,7 +12,7 @@ const plans = [
   {
     index: 0,
     name: "Happiness is a Choice",
-    price: " NG ₦2000",
+    price: " NG ₦2500",
     features: [
       "Fully responsive on all screens",
 
@@ -30,8 +30,7 @@ const plans = [
   {
     index: 1,
     name: "Power of Intercession",
-    feature: "Contact Us",
-    price: "NG ₦3000",
+    price: "NG ₦1500",
     features: [
       "Fully responsive on all screens",
       "Full access to Content in the Book",
@@ -47,7 +46,7 @@ const plans = [
   {
     index: 2,
     name: "Security Definition and Qoutes",
-    price: "NG ₦2000",
+    price: "NG ₦1000",
     features: [
       "Fully responsive on all screens",
       "Full access to Content in the Book",
@@ -62,7 +61,73 @@ const plans = [
   {
     index: 3,
     name: "Security Manual for the Church",
+    price: "NG ₦1000",
+    features: [
+      "Fully responsive on all screens",
+      "Full access to Content in the Book",
+      "Full 100% Quality",
+      "One time Subscription",
+    ],
+    style:
+      " h-full rounded-3xl py-10 flex flex-col  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50  ",
+    description:
+      "A Book that guides you on the safety measures that should be taken in the Church",
+    button: "Contact Us",
+  },
+  {
+    index: 4,
+    name: "20 Inspirational Biblical Facts",
     price: "NG ₦1500",
+    features: [
+      "Fully responsive on all screens",
+      "Full access to Content in the Book",
+      "Full 100% Quality",
+      "One time Subscription",
+    ],
+    style:
+      " h-full rounded-3xl py-10 flex flex-col  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50  ",
+    description:
+      "A Book that guides you on the safety measures that should be taken in the Church",
+    button: "Contact Us",
+  },
+  {
+    index: 5,
+    name: "Basic Security Tips",
+    price: "NG ₦1500",
+    features: [
+      "Fully responsive on all screens",
+      "Full access to Content in the Book",
+      "Full 100% Quality",
+      "One time Subscription",
+    ],
+    style:
+      " h-full rounded-3xl py-10 flex flex-col  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50  ",
+    description:
+      "A Book that guides you on the safety measures that should be taken in the Church",
+    button: "Contact Us",
+  },
+  {
+    index: 6,
+    name: "Church Security",
+    feature: "Contact Us",
+    price: "NG ₦3500",
+    features: [
+      "Fully responsive on all screens",
+      "Full access to Content in the Book",
+      "Full 100% Quality",
+      "One time Subscription",
+    ],
+    style:
+      " h-full rounded-3xl py-10 flex flex-col  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50  ",
+    description:
+      "A Book that guides you on the safety measures that should be taken in the Church",
+    button: "Contact Us",
+  },
+  {
+    index: 7,
+    name: "Danger in Anger",
+    feature: "Contact Us",
+    price: "NG ₦3000",
     features: [
       "Fully responsive on all screens",
       "Full access to Content in the Book",
@@ -146,7 +211,7 @@ const Pricing = () => {
                 {index === 1 && (
                   <Link
                     href="https://buy.stripe.com/14k2b65ZQ8tf5Ve28c"
-                    className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-emerald-500 to-blue-300"
+                    className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-emerald-500 to-purple-400"
                   >
                     Buy Now
                   </Link>
@@ -163,6 +228,38 @@ const Pricing = () => {
                   <Link
                     href="/contact"
                     className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-purple-500 to-blue-300"
+                  >
+                    Buy Now
+                  </Link>
+                )}
+                {index === 4 && (
+                  <Link
+                    href="/contact"
+                    className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-fuchsia-500 to-purple-300"
+                  >
+                    Buy Now
+                  </Link>
+                )}
+                {index === 5 && (
+                  <Link
+                    href="/contact"
+                    className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-amber-500 to-blue-300"
+                  >
+                    Buy Now
+                  </Link>
+                )}
+                {index === 6 && (
+                  <Link
+                    href="/contact"
+                    className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-gray-500 to-purple-400"
+                  >
+                    Buy Now
+                  </Link>
+                )}
+                {index === 7 && (
+                  <Link
+                    href="/contact"
+                    className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-red-500 to-blue-300"
                   >
                     Buy Now
                   </Link>

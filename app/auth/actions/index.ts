@@ -39,7 +39,7 @@ export async function signUpWithEmailAndPassword(data: {
     return JSON.stringify(result);
   }
 
-  redirect("/home");
+  redirect("/articles");
 }
 
 export async function signInWithEmailAndPassword(data: {
@@ -57,7 +57,7 @@ export async function signInWithEmailAndPassword(data: {
     return JSON.stringify(result);
   }
 
-  redirect("/home");
+  redirect("/articles");
 }
 
 export async function logout() {

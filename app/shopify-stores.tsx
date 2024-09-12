@@ -5,7 +5,7 @@ import Image from "next/image";
 const stores = [
   {
     image: "/images/design-g.webp",
-    quote: "MU Security will be bring it's own AI soon",
+    quote: "MU Security will bring it's own AI soon",
     name: "Eric Yaka",
   },
   {
@@ -17,7 +17,7 @@ const stores = [
   {
     image: "/images/custom-3.jpeg",
     quote: "Updates and more Contents will be brought soon enough",
-    name: "Daniel Umana",
+    name: "Daniel Oreva",
   },
 ];
 

@@ -157,7 +157,7 @@ const WebsiteDesign = () => {
                 onClick={() => setIsDss(true)}
               />
               <h3 className="text-white text-[20px] font-bold text-center">
-                MU Vission
+                MU Vision
               </h3>
             </div>
           </div>

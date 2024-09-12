@@ -12,6 +12,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaPhoneSquareAlt } from "react-icons/fa";
+import { FaMailBulk } from "react-icons/fa";
 
 import {
   Select,
@@ -144,19 +145,31 @@ export default function ContactForm() {
               text-gray-300
                     "
           >
-            You can contact us through Let&apos;s Connect.
+            You can contact us through all mediums. <br /> Let&apos;s Connect
+            😊.
           </div>
 
-          <div className="bg-cyan-700 md:w-4/5 space-x-4 p-4 justify-between flex items-center rounded-xl my-4 flex-row md:flex md:flex-row">
-            <button>
+          <div className="bg-cyan-700 md:w-4/5 w-full space-x-5 p-4 justify-between flex items-center rounded-xl my-4 flex-row md:flex md:flex-row overflow-x-auto">
+            <a
+              href={`https://wa.me/${+2348062107945}?text=${onmessage}`}
+              className="items-center flex flex-col "
+            >
               <FaWhatsapp size={30} />
-            </button>
+            </a>
             <button>
               <FaSquareFacebook size={30} />
             </button>
-            <button>
+            <button className="items-center flex flex-col mt-4">
               <FaPhoneSquareAlt size={30} />
+              <h1>08062107945</h1>
             </button>
+            <a
+              href={`mailto:umanamfon06@gmail.com `}
+              className="items-center flex flex-col mt-4 cursor-pointer"
+            >
+              <FaMailBulk size={30} />
+              <h1 className="flex w-full justify-center items-center">Mail</h1>
+            </a>
           </div>
         </div>
 

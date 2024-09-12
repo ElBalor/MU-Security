@@ -20,7 +20,7 @@ const Navbar = ({
   scrollToGraphicDesign,
   scrollToShopifyStores,
   scrollToBrands,
-  scrollToServices, // Add scrollToServices to props
+  scrollToServices,
 }: NavbarProps) => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
@@ -55,6 +55,9 @@ const Navbar = ({
              bg-gradient-to-b from-neutral-50
               to bg-neutral-400 bg-opacity-50"
         >
+          <Link href="articles" className="hover:text-gray-50">
+            MU Articles
+          </Link>
           <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
             About Us
           </div>
