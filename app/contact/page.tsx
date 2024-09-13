@@ -41,6 +41,8 @@ import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import { PiCheckLight, PiSmiley } from "react-icons/pi";
 import Navbar from "@/components/navbar";
+import RenderModel from "@/components/RenderModel";
+import EarthModel from "@/components/models/Earth";
 
 const FormSchema = z.object({
   first_name: z.string(),
@@ -160,10 +162,13 @@ export default function ContactForm() {
             <button>
               <FaSquareFacebook size={30} />
             </button>
-            <button className="items-center flex flex-col mt-4">
+            <a
+              href="tel:08062107945"
+              className="items-center flex flex-col mt-4"
+            >
               <FaPhoneSquareAlt size={30} />
-              <h1>08062107945</h1>
-            </button>
+              <h1>Call Us</h1>
+            </a>
             <a
               href={`mailto:umanamfon06@gmail.com `}
               className="items-center flex flex-col mt-4 cursor-pointer"
@@ -171,6 +176,9 @@ export default function ContactForm() {
               <FaMailBulk size={30} />
               <h1 className="flex w-full justify-center items-center">Mail</h1>
             </a>
+          </div>
+          <div className="w-full h-[500px]">
+            <EarthModel />
           </div>
         </div>
 

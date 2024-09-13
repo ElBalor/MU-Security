@@ -25,6 +25,7 @@ const WebsiteDesign = () => {
     setIsSecurity(!isSecurity);
     setIsSecurityImage(true);
   };
+
   const HandleStateImage = () => {
     setIsSecurityImage(!isSecurityImage);
   };

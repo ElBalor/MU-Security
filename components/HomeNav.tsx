@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const HomeNav = () => {
   return (
-    <nav className="w-full h-[5rem] shadow-xl shadow-cyan-600 bg-gradient-to-br from-fuchsia-600 to-cyan-600 z-10 fixed top-0 flex items-center justify-between px-4 py-2 rounded-md">
+    <nav className="w-full h-[5rem] shadow-xl shadow-cyan-600 bg-gradient-to-br from-blue-600 to-gray-600 z-20 fixed top-0 flex items-center justify-between px-4 py-2 rounded-md">
       <Link
         href="/"
         className="flex items-center rounded-full w-10 h-10 bg-slate-700"

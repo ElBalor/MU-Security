@@ -7,6 +7,7 @@ import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import Mfon from "../../public/person.jpg";
 import ArticleNav from "../../components/HomeNav";
+import StarsCanvas from "@/components/StarCanvas";
 
 const page = async () => {
   const { data } = await readUserSession();
@@ -60,8 +61,9 @@ const page = async () => {
 
   return (
     <>
+      <StarsCanvas />
       <ArticleNav />
-      <div className="min-h-full w-full flex flex-col items-center justify-center space-y-8 p-6 mt-20 bg-gradient-to-br from-gray-400 via-gray-600 to-black">
+      <div className="min-h-full w-full flex flex-col items-center justify-center space-y-8 p-6 mt-20 bg-gradient-to-br from-gray-700 via-gray-600 to-black">
         <h1 className="text-5xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-amber-300 to-blue-400 mb-8">
           Articles
         </h1>
@@ -71,7 +73,7 @@ const page = async () => {
           <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-amber-300 to-slate-400 mb-4">
             Create a New Article
           </h2>
-          <form className="w-full max-w-2xl space-y-4 bg-gradient-to-br from-gray-600 via-slate-700 to-cyan-700 p-6 rounded-lg shadow-md">
+          <form className="w-full relative z-0 bg-opacity-50 max-w-2xl space-y-4 bg-gradient-to-br from-gray-600 via-slate-700 to-cyan-700 p-6 rounded-lg shadow-md">
             <div>
               <label
                 className="block text-gray-300 text-sm font-bold mb-2"
