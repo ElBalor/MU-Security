@@ -36,7 +36,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({
     >
       <div className="flex-col flex space-y-10">
         <Link href="/articles" className="text-black text-2xl">
-          MU Article
+          MUU Article
         </Link>
         <Link href="/pricing" className="text-black text-2xl">
           Pricing

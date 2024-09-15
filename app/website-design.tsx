@@ -24,51 +24,48 @@ const WebsiteDesign = () => {
   const HandleState = () => {
     setIsSecurity(!isSecurity);
     setIsSecurityImage(true);
-  };
-
-  const HandleStateImage = () => {
-    setIsSecurityImage(!isSecurityImage);
+    setTimeout(() => {
+      setIsSecurityImage(false);
+    }, 1500);
   };
 
   const HandleArm = () => {
     setIsArm(!isArm);
     setIsArmImage(true);
-  };
-  const HandleArmImage = () => {
-    setIsArmImage(!isArmImage);
+    setTimeout(() => {
+      setIsArmImage(false);
+    }, 1500);
   };
 
   const HandleDss = () => {
     setIsDss(!isDss);
     setIsDssImage(true);
-  };
-  const HandleDssImage = () => {
-    setIsDssImage(!isDssImage);
+    setTimeout(() => {
+      setIsDssImage(false);
+    }, 1500);
   };
 
   const HandleFlag = () => {
     setIsFlag(!isFlag);
     setIsFlagImage(true);
-  };
-
-  const HandleFlagImage = () => {
-    setIsFlagImage(!isFlagImage);
+    setTimeout(() => {
+      setIsFlagImage(false);
+    }, 1500);
   };
 
   const HandleMagazine = () => {
     setIsMag(!isMag);
     setIsMagImage(true);
-  };
-
-  const HandleMagazineImage = () => {
-    setIsMagImage(!isMagImage);
+    setTimeout(() => {
+      setIsMagImage(false);
+    }, 1500);
   };
 
   return (
     <div className="text-white">
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
         <div className="text-5xl  md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-sky-200 bg-opacity-50">
-          About <br /> MU-Security
+          About <br /> MUU-Security
         </div>
         <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
           An Establishment by MFon Umana who is also the CEO and Founder of
@@ -90,7 +87,7 @@ const WebsiteDesign = () => {
                 onClick={() => setIsSecurity(true)}
               />
               <h3 className="text-white text-[20px] font-bold text-center">
-                MU Security
+                MUU Security
               </h3>
             </div>
           </div>
@@ -102,11 +99,11 @@ const WebsiteDesign = () => {
                 priority
                 className="w-24 h-24 object-cover rounded-full cursor-pointer"
                 src={Magazine}
-                alt="About Mu-Security"
+                alt="About MUU-Security"
                 onClick={() => setIsMag(true)}
               />
               <h3 className="text-white text-[20px] font-bold text-center">
-                MU Magazine
+                MUU AI
               </h3>
             </div>
           </div>
@@ -120,11 +117,11 @@ const WebsiteDesign = () => {
                 priority
                 className="w-24 h-24 object-cover rounded-full cursor-pointer"
                 src={Person}
-                alt="About Mu-Security"
+                alt="About MUU-Security"
                 onClick={() => setIsArm(true)}
               />
               <h3 className="text-white text-[20px] font-bold text-center">
-                MU CEO
+                MUU CEO
               </h3>
             </div>
           </div>
@@ -140,7 +137,7 @@ const WebsiteDesign = () => {
                 onClick={() => setIsFlag(true)}
               />
               <h3 className="text-white text-[20px] font-bold text-center">
-                MU Books
+                MUU Books
               </h3>
             </div>
           </div>
@@ -158,7 +155,7 @@ const WebsiteDesign = () => {
                 onClick={() => setIsDss(true)}
               />
               <h3 className="text-white text-[20px] font-bold text-center">
-                MU Vision
+                MUU Vision
               </h3>
             </div>
           </div>
@@ -174,7 +171,7 @@ const WebsiteDesign = () => {
                 onClick={() => setIsFlag(true)}
               />
               <h3 className="text-white text-[20px] font-bold text-center">
-                MU Books
+                MUU Books
               </h3>
             </div>
           </div>
@@ -219,13 +216,6 @@ const WebsiteDesign = () => {
               height={300}
               className="fixed z-0 w-full h-[600px] xl:h-[450px] xl:w-[700px] rounded-xl"
             />
-
-            <div
-              onClick={() => HandleStateImage()}
-              className="relative top-[550px] cursor-pointer rounded-md bg-gradient-to-r from-cyan-200 to-slate-400  h-10 w-28 p-1 items-center justify-center m-auto text-center border-2 border-cyan-600 shadow-xl shadow-red-500"
-            >
-              Close
-            </div>
           </div>
         </div>
       )}
@@ -277,12 +267,6 @@ const WebsiteDesign = () => {
             {/* <h1 className="text-center bottom-3 font-bold text-4xl xl:text-6xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-rose-700 ">
               Mfon
             </h1> */}
-            <div
-              onClick={() => HandleArmImage()}
-              className="relative top-[550px] cursor-pointer rounded-md bg-gradient-to-r from-cyan-400 to-cyan-600  h-10 w-28 p-1 items-center justify-center m-auto text-center border-2 border-cyan-600 shadow-lg shadow-cyan-500"
-            >
-              Close
-            </div>
           </div>
         </div>
       )}
@@ -290,7 +274,7 @@ const WebsiteDesign = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ease-in">
           <div className="items-center justify-center bg-gradient-to-br from-gray-600 to-slate-900 bg-opacity-45 w-full h-[520px] xl:h-[450px] xl:w-[700px] space-y-3 rounded-lg shadow-2xl shadow-white">
             <h1 className="text-center mt-2 font-bold text-4xl xl:text-6xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-600 ">
-              MU Vision
+              MUU Vision
             </h1>
             <p className="w-full h-full items-center justify-center mt-3 text-xl xl:text-2xl font-serif">
               It is my humble believe that all the factors negating our security
@@ -327,12 +311,6 @@ const WebsiteDesign = () => {
             {/* <h1 className="text-center bottom-3 font-bold text-4xl xl:text-6xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-700 ">
               DSS
             </h1> */}
-            <div
-              onClick={() => HandleDssImage()}
-              className="relative top-[500px] cursor-pointer rounded-md text-red-500 bg-gradient-to-r from-gray-600 to-slate-800  h-10 w-28 p-1 items-center justify-center m-auto text-center border-2 border-gray-600 shadow-lg shadow-gray-400"
-            >
-              Close
-            </div>
           </div>
         </div>
       )}
@@ -340,7 +318,7 @@ const WebsiteDesign = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ease-in">
           <div className="items-center justify-center bg-gradient-to-br from-fuchsia-600 to-gray-800 bg-opacity-45 w-full h-[600px] xl:h-[450px] xl:w-[700px] space-y-3 rounded-lg shadow-2xl shadow-green-500">
             <h1 className="text-center mt-2 font-bold text-4xl xl:text-6xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-slate-300 ">
-              MU Books
+              MUU Books
             </h1>
             <p className="xl:text-xl text-xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-black font-semibold ">
               Muu-Books specializes in the sales and production of security
@@ -376,14 +354,8 @@ const WebsiteDesign = () => {
               className="fixed z-0 w-full h-[520px] xl:h-[450px] xl:w-[700px] rounded-xl"
             />
             <h1 className="text-center bottom-2 font-bold text-4xl xl:text-6xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-green-800 ">
-              MU Books
+              MUU Books
             </h1>
-            <div
-              onClick={() => HandleFlagImage()}
-              className="relative top-[500px] cursor-pointer rounded-md bg-gradient-to-r from-amber-400 to-red-600  h-10 w-28 p-1 items-center justify-center m-auto text-center border-2 border-lime-600 shadow-lg shadow-lime-500"
-            >
-              Close
-            </div>
           </div>
         </div>
       )}
@@ -391,18 +363,17 @@ const WebsiteDesign = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ease-in">
           <div className="items-center justify-center bg-gradient-to-br from-amber-500 to-red-500 bg-opacity-45 w-full h-[600px] xl:h-[450px] xl:w-[700px] space-y-3 rounded-lg shadow-2xl shadow-green-500">
             <h1 className="text-center mt-2 font-bold text-4xl xl:text-6xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-slate-300 ">
-              MU MagaZine
+              MUU AI
             </h1>
             <p className="xl:text-xl text-xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-black font-semibold ">
-              MU Security Magazine is an authoritative publication dedicated to
-              the realm of security and safety. Designed for professionals,
-              enthusiasts, and stakeholders, this magazine offers in-depth
-              analysis, expert insights, and comprehensive coverage of the
-              latest trends and developments in the security industry. From
-              detailed features on advanced security technologies to practical
-              guides on risk management and crime prevention, MU Security
-              Magazine is a vital resource for staying informed and ahead of
-              emerging threats.
+              At MUU Security, we leverage cutting-edge AI technology to enhance
+              security and safety measures for individuals and organizations.
+              Our AI-driven systems are designed to predict, detect, and prevent
+              potential threats by analyzing patterns and providing real-time
+              alerts. With AI, we aim to transform the way security is managed,
+              ensuring faster response times, smarter surveillance, and a higher
+              level of protection.Explore our AI-based solutions and learn how
+              innovation is shaping the future of security.
             </p>
             <div
               onClick={() => HandleMagazine()}
@@ -424,14 +395,8 @@ const WebsiteDesign = () => {
               className="fixed z-0 w-full h-[520px] xl:h-[450px] xl:w-[700px] rounded-xl"
             />
             <h1 className="text-center bottom-2 font-bold text-4xl xl:text-6xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-green-800 ">
-              MU Magazine
+              MUU Watch
             </h1>
-            <div
-              onClick={() => HandleMagazineImage()}
-              className="relative top-[500px] cursor-pointer rounded-md bg-gradient-to-r from-amber-400 to-red-600  h-10 w-28 p-1 items-center justify-center m-auto text-center border-2 border-lime-600 shadow-lg shadow-lime-500"
-            >
-              Close
-            </div>
           </div>
         </div>
       )}

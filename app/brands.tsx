@@ -47,11 +47,11 @@ const Brands = () => {
           className="text-4xl md:pb-8 md:text-7xl text-center 
         bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-sky-200 bg-opacity-50"
         >
-          The Latest brands <br /> Of MU Security
+          The Latest brands <br /> Of MUU Security
         </div>
 
         <p className="mt-4 text-lg font-normal  text-amber-400 max-w-lg text-center mx-auto">
-          Unlock Premium Version of MU Security
+          Unlock Premium Version of MUU Security
         </p>
 
         <div className="items-center justify-center mx-auto md:w-3/5 cursor-pointer">

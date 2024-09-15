@@ -56,7 +56,7 @@ const Navbar = ({
               to bg-neutral-400 bg-opacity-50"
         >
           <Link href="articles" className="hover:text-gray-50">
-            MU Articles
+            MUU Articles
           </Link>
           <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
             About Us
@@ -66,10 +66,10 @@ const Navbar = ({
           </div>
 
           <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
-            MU Updates
+            MUU Updates
           </div>
           <div onClick={scrollToBrands} className="hover:text-gray-50">
-            MU Brands
+            MUU Brands
           </div>
 
           <Link href="/pricing" className="hover:text-gray-50">

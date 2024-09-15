@@ -10,7 +10,7 @@ const Services = () => {
          bg-clip-text text-transparent bg-gradient-to-b
           from-blue-500 to-neutral-50 bg-opacity-50 mt-20"
       >
-        More of MU Security
+        More of MUU Security
       </div>
       <p
         className="mt-4 text-lg font-normal

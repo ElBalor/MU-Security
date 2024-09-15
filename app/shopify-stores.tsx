@@ -5,12 +5,12 @@ import Image from "next/image";
 const stores = [
   {
     image: "/images/design-g.webp",
-    quote: "MU Security will bring it's own AI soon",
+    quote: "MUU Security will bring it's own AI soon",
     name: "Eric Yaka",
   },
   {
     image: "/images/custom-2.jpeg",
-    quote: "MU Security will be bring it's Magazines",
+    quote: "MUU Security will be bring it's Magazines",
     name: "Mfon Umana",
   },
 
@@ -31,11 +31,11 @@ const ShopifyStores = () => {
     >
       <div className=" p-4  mx-auto relative z-10  w-full ">
         <div className="text-4xl underline py-10 md:pb-8 md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 via-purple-400 to-gray-800/[0.89]  bg-opacity-50">
-          Mu Updates <br />
+          MUU Updates <br />
         </div>
 
         <p className="mt-4 text-lg font-normal  text-neutral-800 max-w-lg text-center mx-auto">
-          More of Mu Security will be coming soon. <br /> Update will be coming
+          More of MUU Security will be coming soon. <br /> Update will be coming
           soon
         </p>
         <div className="md:flex items-center justify-center px-10 ">

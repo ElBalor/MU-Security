@@ -64,7 +64,10 @@ const page = async () => {
       <StarsCanvas />
       <ArticleNav />
       <div className="min-h-full w-full flex flex-col items-center justify-center space-y-8 p-6 mt-20 bg-gradient-to-br from-gray-700 via-gray-600 to-black">
-        <h1 className="text-5xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-amber-300 to-blue-400 mb-8">
+        <h1
+          className="text-5xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-amber-300 to-blue-400 mb-8
+               relative transform perspective-500 rotate-x-6 rotate-y-6 shadow-3xl"
+        >
           Articles
         </h1>
 
@@ -127,9 +130,9 @@ const page = async () => {
               <div
                 className={`max-w-2xl ${
                   articleColors[index % articleColors.length]
-                } p-5 rounded-lg shadow-md`}
+                } p-5 rounded-lg shadow-md bg-opacity-45`}
               >
-                <p className="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-br from-amber-400 to-slate-600 mb-2">
+                <p className="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-br from-amber-400 to-slate-300 mb-2">
                   {article.author}
                 </p>
                 <p className="text-md text-gray-900 mb-4">{article.content}</p>
