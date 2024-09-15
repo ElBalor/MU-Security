@@ -69,7 +69,7 @@ const WebsiteDesign = () => {
         </div>
         <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
           An Establishment by MFon Umana who is also the CEO and Founder of
-          MU-Security
+          MUU-Security
         </p>
       </div>
 
@@ -179,7 +179,7 @@ const WebsiteDesign = () => {
       </div>
       {isSecurity && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ease-in">
-          <div className="items-center justify-center bg-gradient-to-br from-red-500 to-gray-600 bg-opacity-45 w-full h-[600px] xl:h-[450px] xl:w-[700px] space-y-3 rounded-lg shadow-2xl shadow-cyan-500">
+          <div className="items-center justify-center bg-gradient-to-br from-red-500 to-gray-600 bg-opacity-45 w-full h-[650px] xl:h-[450px] xl:w-[700px] space-y-3 rounded-lg shadow-2xl shadow-cyan-500">
             <h1 className="text-center mt-2 font-bold text-4xl xl:text-6xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-black">
               MUU Security
             </h1>
