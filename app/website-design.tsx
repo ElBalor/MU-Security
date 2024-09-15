@@ -26,7 +26,7 @@ const WebsiteDesign = () => {
     setIsSecurityImage(true);
     setTimeout(() => {
       setIsSecurityImage(false);
-    }, 1500);
+    }, 1300);
   };
 
   const HandleArm = () => {
@@ -34,7 +34,7 @@ const WebsiteDesign = () => {
     setIsArmImage(true);
     setTimeout(() => {
       setIsArmImage(false);
-    }, 1500);
+    }, 1300);
   };
 
   const HandleDss = () => {
@@ -42,7 +42,7 @@ const WebsiteDesign = () => {
     setIsDssImage(true);
     setTimeout(() => {
       setIsDssImage(false);
-    }, 1500);
+    }, 1300);
   };
 
   const HandleFlag = () => {
@@ -50,7 +50,7 @@ const WebsiteDesign = () => {
     setIsFlagImage(true);
     setTimeout(() => {
       setIsFlagImage(false);
-    }, 1500);
+    }, 1300);
   };
 
   const HandleMagazine = () => {
@@ -58,7 +58,7 @@ const WebsiteDesign = () => {
     setIsMagImage(true);
     setTimeout(() => {
       setIsMagImage(false);
-    }, 1500);
+    }, 1300);
   };
 
   return (
@@ -179,11 +179,11 @@ const WebsiteDesign = () => {
       </div>
       {isSecurity && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ease-in">
-          <div className="items-center justify-center bg-gradient-to-br from-red-600 to-gray-800 bg-opacity-45 w-full h-[600px] xl:h-[450px] xl:w-[700px] space-y-3 rounded-lg shadow-2xl shadow-cyan-500">
+          <div className="items-center justify-center bg-gradient-to-br from-red-500 to-gray-600 bg-opacity-45 w-full h-[600px] xl:h-[450px] xl:w-[700px] space-y-3 rounded-lg shadow-2xl shadow-cyan-500">
             <h1 className="text-center mt-2 font-bold text-4xl xl:text-6xl relative z-20 text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-black">
               MUU Security
             </h1>
-            <p className="xl:text-xl text-xl relative z-20 text-transparent bg-clip-text bg-gradient-to-br from-gray-200  to-gray-400 font-semibold ">
+            <p className="xl:text-xl text-xl relative z-20 text-transparent bg-clip-text bg-white font-semibold ">
               MUU-SECURITY is a versatile security firm offering comprehensive
               services across all sectors. It is led by Mfon Umana, a retired
               Deputy Director of the Department of State Services, and is based
