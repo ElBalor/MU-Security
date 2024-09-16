@@ -22,19 +22,19 @@ const FAQS = () => {
         </div>
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
-            <AccordionTrigger>What is MU ?</AccordionTrigger>
-            <AccordionContent>MU stands for Mfon Umana</AccordionContent>
+            <AccordionTrigger>What is MUU ?</AccordionTrigger>
+            <AccordionContent>MUU stands for Mfon Umana</AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>CEO of MUSecurity?</AccordionTrigger>
+            <AccordionTrigger>CEO of MUUSecurity?</AccordionTrigger>
             <AccordionContent>
-              CEO/ Founder of MU Security is Mfon Umana
+              CEO/ Founder of MUU Security is Mfon Umana
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>MU Pricing ?</AccordionTrigger>
+            <AccordionTrigger>MUU Pricing ?</AccordionTrigger>
             <AccordionContent>
-              The Prices of MU Security varies for each of the Books
+              The Prices of MUU Security varies for each of the Books
             </AccordionContent>
           </AccordionItem>
 

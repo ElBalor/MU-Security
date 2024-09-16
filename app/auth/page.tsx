@@ -33,7 +33,7 @@ export default async function page() {
           height={300}
         />
         <h1 className="items-center justify-center text-center w-full text-5xl font-semibold fixed top-16 text-transparent bg-clip-text bg-gradient-to-br from-amber-400 via-blue-300 to-cyan-500">
-          <span className="text-6xl">M</span>U-Security
+          <span className="text-6xl">M</span>UU-Security
         </h1>
         <div className="flex justify-center items-center h-screen mt-10 xl:mt-32">
           <div className="w-96 fixed xl:w-[1200px] ">
