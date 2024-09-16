@@ -23,7 +23,7 @@ const FAQS = () => {
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger>What is MUU ?</AccordionTrigger>
-            <AccordionContent>MUU stands for Mfon Umana</AccordionContent>
+            <AccordionContent>MUU stands for Mfon Udoh Umana</AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>CEO of MUUSecurity?</AccordionTrigger>

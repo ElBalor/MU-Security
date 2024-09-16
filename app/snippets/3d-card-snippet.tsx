@@ -4,30 +4,31 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Block from "../../public/block.jpg";
+import MUWATCH from "../../public/mu-watch.jpg";
 
 export function ThreeDCardExample() {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-gradient-to-br from-lime-500 via-green-300 to-gray-600 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[23rem] sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+      <CardBody className="bg-gradient-to-br from-cyan-500 via-blue-300 to-gray-800 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[23rem] sm:w-[30rem] h-auto rounded-xl p-6 border  ">
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-gray-700 m-auto dark:text-white"
+          className="text-2xl font-bold text-gray-700 m-auto dark:text-white"
         >
-          Mu Watch
+          MU <span className="text-red-600">Watch</span>
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+          className="text-neutral-700 text-sm max-w-sm mt-2 dark:text-neutral-600"
         >
           Hover over this card..
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
-            src={Block}
+            src={MUWATCH}
             height="1000"
             width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            className="h-96 w-72 object-cover m-auto rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
         </CardItem>
