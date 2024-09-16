@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import Block from "../../public/block.jpg";
 import MUWATCH from "../../public/mu-watch.jpg";
 
 export function ThreeDCardExample() {
@@ -28,7 +27,7 @@ export function ThreeDCardExample() {
             src={MUWATCH}
             height="1000"
             width="1000"
-            className="h-96 w-72 object-cover m-auto rounded-xl group-hover/card:shadow-xl"
+            className="h-96 w-72 object-cover m-auto rounded-xl group-hover/card:shadow-2xl shadow-xl"
             alt="thumbnail"
           />
         </CardItem>

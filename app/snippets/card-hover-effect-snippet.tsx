@@ -33,7 +33,7 @@ export const projects = [
       </div>
     ),
     title: "E Store",
-    description: "The Production of MU Magazine will be avaible shortly",
+    description: "The Production of MU Magazine will be available shortly",
   },
   {
     icon: (
@@ -43,7 +43,7 @@ export const projects = [
     ),
     title: "Authentication",
     description:
-      "MU Security respect and Value your privacy your login details and information a kept safely ",
+      "MUU Security respect and Value your privacy your login details and information a kept safely ",
   },
   {
     icon: (
@@ -62,7 +62,7 @@ export const projects = [
     ),
     title: "Mobile App",
     description:
-      "Mobile Application of MU Security will be available in a short period of time.",
+      "Mobile Application of MUU Security will be available in a short period of time.",
   },
   {
     icon: (
