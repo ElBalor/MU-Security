@@ -39,16 +39,12 @@ const FAQS = () => {
           </AccordionItem>
 
           <AccordionItem value="item-4">
-            <AccordionTrigger>Support ?</AccordionTrigger>
-            <AccordionContent>
-              Developer of this website is Eric Yaka
-            </AccordionContent>
+            <AccordionTrigger>What is avalailablle ?</AccordionTrigger>
+            <AccordionContent>Articles and Books.</AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-5">
             <AccordionTrigger>Developer Contact ?</AccordionTrigger>
-            <AccordionContent>
-              Eric&apos;s Yaka Contact 09014682944
-            </AccordionContent>
+            <AccordionContent>Eric&apos;s Yaka</AccordionContent>
           </AccordionItem>
         </Accordion>
       </div>

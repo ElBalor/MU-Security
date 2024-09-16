@@ -138,7 +138,7 @@ export default function ContactForm() {
       <div className="md:flex items-start justify-center md:py-20 px-6">
         <div className="">
           <div className="text-5xl font-medium  w-full md:w-2/3  pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-            Contact MU-Security
+            Contact MUU-Security
           </div>
           <div
             className="
@@ -282,7 +282,7 @@ export default function ContactForm() {
                           </SelectItem>
                         </div>
                         <SelectItem value="Want to cnnect with MU team">
-                          Want to cnnect with MU team
+                          Want to connect with MUU team
                         </SelectItem>
                         <SelectItem value="Failed Transaction">
                           Failed Transaction
@@ -358,7 +358,7 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="text-xs font-light  md:w-3/4 mb-1 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                  I agree to MU Security&apos; Terms and Conditions to bird
+                  I agree to MUU Security&apos; Terms and Conditions
                 </div>
               </div>
 
