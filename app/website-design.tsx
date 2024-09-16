@@ -26,7 +26,7 @@ const WebsiteDesign = () => {
     setIsSecurityImage(true);
     setTimeout(() => {
       setIsSecurityImage(false);
-    }, 1300);
+    }, 1000);
   };
 
   const HandleArm = () => {
@@ -34,7 +34,7 @@ const WebsiteDesign = () => {
     setIsArmImage(true);
     setTimeout(() => {
       setIsArmImage(false);
-    }, 1300);
+    }, 1000);
   };
 
   const HandleDss = () => {
@@ -42,7 +42,7 @@ const WebsiteDesign = () => {
     setIsDssImage(true);
     setTimeout(() => {
       setIsDssImage(false);
-    }, 1300);
+    }, 1000);
   };
 
   const HandleFlag = () => {
@@ -50,7 +50,7 @@ const WebsiteDesign = () => {
     setIsFlagImage(true);
     setTimeout(() => {
       setIsFlagImage(false);
-    }, 1300);
+    }, 1000);
   };
 
   const HandleMagazine = () => {
@@ -58,7 +58,7 @@ const WebsiteDesign = () => {
     setIsMagImage(true);
     setTimeout(() => {
       setIsMagImage(false);
-    }, 1300);
+    }, 1000);
   };
 
   return (
@@ -233,7 +233,7 @@ const WebsiteDesign = () => {
               Umana Mfon
             </h1>
             <p className="xl:text-xl text-xl relative z-20 text-transparent bg-clip-text bg-gradient-to-br from-gray-800 via-black to-gray-600 font-semibold ">
-              Mfon Udo Umana was born on the 18th April, 1964. He hails from
+              Mfon Udoh Umana was born on the 18th April, 1964. He hails from
               Ikot Obong-Ibekwe, Ikot Abasi Local Government Area, Akwa-Ibom
               State. He is of the parentage of Mr. Udo Moses Umana (Late) and
               Eka Udo Moses Umana (Late). He attended Saint Patrick&apos;s

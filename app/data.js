@@ -21,17 +21,17 @@ export const books = [
   },
   {
     title: "20 Inspirational Bible Facts",
-    cover: "/covers/20-insp.jpg",
+    cover: "/covers/book6.jpg",
     pdf: "/Bookpdf/20_inspirational_bible_facts.pdf",
   },
   {
     title: "Basic Security Tips",
-    cover: "/covers/basic-tips.jpg",
+    cover: "/covers/book1.jpg",
     pdf: "/Bookpdf/basic-security-tips.pdf",
   },
   {
     title: "Church Security ",
-    cover: "/covers/book3.png",
+    cover: "/covers/book3.jpg",
     pdf: "/Bookpdf/church-security-tips.pdf",
   },
   {
