@@ -108,21 +108,21 @@ const Brands = () => {
             font.className
           )}
         >
-          Get Reaady🔥
+          Get Ready🔥
         </div>
 
         <div className="items-center flex justify-center flex-col text-white">
           <Image
-            src="/images/Balor.jpg"
+            src="/mu-logo.jpg"
             alt="logo"
             width={1000}
             height={1000}
-            className="pt-2 xl:pt-0 xl:w-24 xl:h-24 h-20 w-20 rounded-full"
+            className="pt-2 xl:pt-0 xl:w-24 xl:h-24 h-20 w-20 animate-spin rounded-full"
           />
 
           <div className=" text-center">
-            <div className="text-sm  font-medium pt-4">Developer</div>
-            <div className="text-sm">Eric Yaka, Software Developer</div>
+            <div className="text-sm  font-medium pt-4">For</div>
+            <div className="text-sm">MUU Security</div>
           </div>
         </div>
       </div>

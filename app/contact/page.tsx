@@ -1,19 +1,14 @@
 "use client";
 
 import { useState } from "react";
-
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import { useForm } from "react-hook-form";
-
 import * as z from "zod";
-
+import { toast } from "sonner";
+import emailjs from "@emailjs/browser"; // Import emailjs
 import { Checkbox } from "@/components/ui/checkbox";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneSquareAlt, FaMailBulk } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
-import { FaPhoneSquareAlt } from "react-icons/fa";
-import { FaMailBulk } from "react-icons/fa";
-
 import {
   Select,
   SelectContent,
@@ -21,72 +16,36 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
 import { Button } from "@/components/ui/button";
-
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
-
 import { Input } from "@/components/ui/input";
-
-import { useToast } from "@/components/ui/use-toast";
-
 import { Textarea } from "@/components/ui/textarea";
-import { PiCheckLight, PiSmiley } from "react-icons/pi";
-import Navbar from "@/components/navbar";
-import RenderModel from "@/components/RenderModel";
+import { PiCheckLight } from "react-icons/pi";
 import EarthModel from "@/components/models/Earth";
+import Navbar from "@/components/navbar";
 
+// Define the schema using Zod
 const FormSchema = z.object({
-  first_name: z.string(),
-  last_name: z.string(),
-  email: z.string().email(),
-  job_title: z.string(),
-  company_name: z.string(),
-  help: z.enum([
-    "Evaluate Bird for my company",
-    "Learn More",
-    "Get a Quote",
-    "Other",
-  ]),
-  services: z.enum([
-    "Mobile App Develoment",
-    "Social Media Marketing",
-    "UI/UX Design",
-    "Branding",
-    "Website Development",
-  ]),
-  info: z.string(),
+  first_name: z.string().min(1, "First name is required"),
+  last_name: z.string().min(1, "Last name is required"),
+  email: z.string().email("Invalid email address"),
+  message: z.string().min(5, "Message must be at least 5 characters long"),
+  help: z.enum(["Evaluate MUU Security", "Learn More", "Get a Quote", "Other"]),
+  terms: z.boolean().refine((val) => val === true, {
+    message: "You must agree to the terms and conditions",
+  }),
 });
-
-type FormValues = {
-  first_name: string;
-  last_name: string;
-  email: string;
-  job_title: string;
-  company_name: string;
-  help: "Evaluate Bird for my company" | "Learn More" | "Get a Quote" | "Other";
-  services:
-    | "Mobile App Develoment"
-    | "Social Media Marketing"
-    | "UI/UX Design"
-    | "Branding"
-    | "Website Development";
-  info: string;
-  terms: boolean;
-};
+type FormValues = z.infer<typeof FormSchema>;
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const { toast } = useToast();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(FormSchema),
@@ -94,40 +53,44 @@ export default function ContactForm() {
       first_name: "",
       last_name: "",
       email: "",
-      job_title: "",
-      company_name: "",
+      message: "",
       help: "Learn More",
-      services: "Mobile App Develoment",
-      info: "",
     },
   });
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
+  async function onSubmit(data: FormValues) {
+    setLoading(true);
     try {
-      setLoading(true);
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const res = await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        {
+          name: data.email,
+          to_name: "ElBalor",
+          from_name: data.first_name,
+          from_email: data.email,
+          message: data.message,
+          help: data.help,
+        },
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      );
 
-      if (!res.ok) {
-        throw new Error("Something went wrong");
+      if (res.status === 200) {
+        setSubmitted(true);
+        toast.success("Message sent successfully!");
+      } else {
+        throw new Error("Failed to send the message");
       }
-
-      setSubmitted(true);
     } catch (error) {
-      toast({
-        title: "Error",
-        description: "Something went wrong",
-      });
+      toast.error("Error sending message. Please try again.");
+      console.error("Error during submission:", error);
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <div className=" w-full   md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
+    <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <Navbar
         scrollToWebsiteDesign={() => {}}
         scrollToGraphicDesign={() => {}}
@@ -137,28 +100,18 @@ export default function ContactForm() {
       />
       <div className="md:flex items-start justify-center md:py-20 px-6">
         <div className="">
-          <div className="text-5xl font-medium  w-full md:w-2/3  pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          <div className="text-5xl font-medium w-full md:w-2/3 pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Contact MUU-Security
           </div>
-          <div
-            className="
-              
-              py-4
-              text-gray-300
-                    "
-          >
+          <div className="py-4 text-gray-300">
             You can contact us through all mediums. <br /> Let&apos;s Connect
             😊.
           </div>
 
           <div className="bg-cyan-700 md:w-4/5 w-full space-x-5 p-4 justify-between flex items-center rounded-xl my-4 flex-row md:flex md:flex-row overflow-x-auto">
-            <a
-              href={`https://wa.me/${+2348062107945}?text=Hello%20MU-Security!`}
-              className="items-center flex flex-col "
-            >
+            <a href={`https://wa.me/2348062107945?text=Hello%20MU-Security!`}>
               <FaWhatsapp size={30} />
             </a>
-
             <button>
               <FaSquareFacebook size={30} />
             </button>
@@ -170,8 +123,8 @@ export default function ContactForm() {
               <h1>Call Us</h1>
             </a>
             <a
-              href={`mailto:umanamfon06@gmail.com `}
-              className="items-center flex flex-col mt-4 cursor-pointer"
+              href="mailto:umanamfon06@gmail.com"
+              className="items-center flex flex-col mt-4"
             >
               <FaMailBulk size={30} />
               <h1 className="flex w-full justify-center items-center">Mail</h1>
@@ -186,24 +139,16 @@ export default function ContactForm() {
           {!submitted ? (
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="
-            space-y-4
-            h-full
-            border rounded-3xl p-10
-            md:w-1/3
-            
-            
-                     
-                        "
+              className="space-y-4 h-full border rounded-3xl p-10 md:w-1/3"
             >
               <div className="md:flex items-center gap-6 ">
                 <FormField
                   control={form.control}
                   name="first_name"
                   render={({ field }) => (
-                    <FormItem className="items-center justify-center  w-full">
+                    <FormItem className="w-full">
                       <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                        First name *
+                        Full name *
                       </FormLabel>
                       <FormControl>
                         <Input {...field} />
@@ -211,14 +156,13 @@ export default function ContactForm() {
                     </FormItem>
                   )}
                 />
-
                 <FormField
                   control={form.control}
                   name="last_name"
                   render={({ field }) => (
-                    <FormItem className="items-center justify-center  w-full">
+                    <FormItem className="w-full">
                       <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                        Last name *
+                        user name (optional) *
                       </FormLabel>
                       <FormControl>
                         <Input {...field} />
@@ -232,7 +176,7 @@ export default function ContactForm() {
                 control={form.control}
                 name="email"
                 render={({ field }) => (
-                  <FormItem className="items-center justify-center  w-full">
+                  <FormItem className="w-full">
                     <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
                       Email *
                     </FormLabel>
@@ -245,54 +189,15 @@ export default function ContactForm() {
 
               <FormField
                 control={form.control}
-                name="company_name"
+                name="message"
                 render={({ field }) => (
-                  <FormItem className="items-center justify-center  w-full">
+                  <FormItem className="w-full">
                     <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                      Company name?
+                      Message *
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} />
+                      <Textarea {...field} />
                     </FormControl>
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="services"
-                render={({ field }) => (
-                  <FormItem className="items-center justify-center w-full">
-                    <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                      Services you are interested in
-                    </FormLabel>
-                    <Select
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                    >
-                      <FormControl>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select an option" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <div className="flex gap-4">
-                          <SelectItem value=" Connect to get MU Books">
-                            Connect to get books
-                          </SelectItem>
-                        </div>
-                        <SelectItem value="Want to cnnect with MU team">
-                          Want to connect with MUU team
-                        </SelectItem>
-                        <SelectItem value="Failed Transaction">
-                          Failed Transaction
-                        </SelectItem>
-                        <SelectItem value="Make Enquiry">
-                          Make Enquiry
-                        </SelectItem>
-                        <SelectItem value="Random">Random</SelectItem>
-                      </SelectContent>
-                    </Select>
                   </FormItem>
                 )}
               />
@@ -301,10 +206,8 @@ export default function ContactForm() {
                 control={form.control}
                 name="help"
                 render={({ field }) => (
-                  <FormItem className="items-center justify-center  w-full">
-                    <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                      How can we help ?
-                    </FormLabel>
+                  <FormItem className="w-full">
+                    <FormLabel>How can we help?</FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
@@ -315,96 +218,52 @@ export default function ContactForm() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <div className="flex gap-4">
-                          <SelectItem value="Evaluate Bird for my company">
-                            Evaluate your Company
-                          </SelectItem>
-                        </div>
+                        <SelectItem value="Evaluate Bird for my company">
+                          Evaluate MUU Security
+                        </SelectItem>
                         <SelectItem value="Learn More">Learn More</SelectItem>
                         <SelectItem value="Get a Quote">Get a Quote</SelectItem>
-
                         <SelectItem value="Other">Other</SelectItem>
                       </SelectContent>
                     </Select>
                   </FormItem>
                 )}
               />
-
               <FormField
                 control={form.control}
-                name="info"
+                name="terms"
                 render={({ field }) => (
-                  <FormItem className="items-center justify-center w-full">
-                    <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                      Anything else ?
-                    </FormLabel>
+                  <FormItem className="flex items-center space-x-2">
                     <FormControl>
-                      <Textarea style={{ height: "100px" }} {...field} />
+                      <Checkbox
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
                     </FormControl>
+                    <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+                      I agree to the terms and conditions of MUU Security
+                    </FormLabel>
                   </FormItem>
                 )}
               />
-
-              <div className="flex gap-4 items-center">
-                <div>
-                  <Checkbox
-                    className="
-                outline
-                border-2
-                text-sm
-                font-light
-                bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400
-                "
-                  />
-                </div>
-                <div className="text-xs font-light  md:w-3/4 mb-1 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                  I agree to MUU Security&apos; Terms and Conditions
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <Button
-                  type="submit"
-                  className="
-                            text-sm
-                            font-light
-                        
-                            "
-                  disabled={loading}
-                  onClick={() => form.handleSubmit(onSubmit)}
-                >
-                  Submit
-                </Button>
-              </div>
+              <Button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-gradient-to-br from-slate-400 to-blue-400 hover:scale-110 duration-700"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </Button>
             </form>
           ) : (
-            <>
-              <div
-                className="
-        text-xl 
-        
-        md:text-2xl 
-        flex 
-        items-center
-        justify-center
-        flex-col
-        
-
- 
-        px-8
-
-        "
-              >
-                <div className="w-80 py-20">
-                  <PiSmiley className="text-6xl text-[#6c6684] mx-auto" />
-
-                  <div className="text-gray-500 font-light  text-center justify-center mx-auto py-10">
-                    We&apos;ve received your inquiry and will be contacting you
-                    via email shortly.
-                  </div>
-                </div>
-              </div>
-            </>
+            <div className="text-center ">
+              <PiCheckLight size={80} />
+              <h1 className="text-2xl font-semibold">
+                Message Sent Successfully!
+              </h1>
+              <h1 className="text-2xl font-semibold text-gray-300 animate-pulse ">
+                We will get back to you shortly.
+              </h1>
+            </div>
           )}
         </Form>
       </div>
