@@ -18,7 +18,7 @@ const Services = () => {
           text-center mx-auto"
       >
         This Establishment was founded to Aid the community, assits youths on
-        the right way to leave lives as Nigerian
+        the right way to live lives as Nigerian
       </p>
 
       <CardHoverEffectDemo />

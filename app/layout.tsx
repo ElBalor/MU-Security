@@ -7,8 +7,8 @@ import "./globals.css";
 const font = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "MU Security",
-  description: "A Security Website for the Mass",
+  title: "MUU Security",
+  description: "The Security Website for the Mass",
 };
 
 export default function RootLayout({

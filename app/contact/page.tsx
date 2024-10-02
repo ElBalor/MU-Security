@@ -27,8 +27,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { PiCheckLight } from "react-icons/pi";
-import EarthModel from "@/components/models/Earth";
+
 import Navbar from "@/components/navbar";
+import dynamic from "next/dynamic";
 
 // Define the schema using Zod
 const FormSchema = z.object({
@@ -42,6 +43,10 @@ const FormSchema = z.object({
   }),
 });
 type FormValues = z.infer<typeof FormSchema>;
+
+const EarthModel = dynamic(() => import("@/components/models/Earth"), {
+  ssr: false,
+});
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
