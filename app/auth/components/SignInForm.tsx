@@ -67,7 +67,7 @@ export default function SignInForm() {
             </pre>
           ),
         });
-        redirect("/home");
+        redirect("/articles");
       }
     });
   }

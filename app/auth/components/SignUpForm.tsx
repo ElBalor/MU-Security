@@ -86,7 +86,7 @@ export default function RegisterForm() {
             </pre>
           ),
         });
-        return redirect("/home");
+        return redirect("/articles");
       }
     });
   }
